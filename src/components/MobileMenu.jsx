@@ -42,7 +42,7 @@ export const MobileMenu = ({ openMenu, setOpenMenu }) => {
         About
       </a>
       <a
-        href="#project"
+        href="#projects"
         onClick={() => setOpenMenu(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
