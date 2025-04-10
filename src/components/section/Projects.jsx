@@ -65,35 +65,9 @@ export const Projects = () => {
             </div>
           </div>
             {/* third project */}
+           
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-teal-500/30 hover:shadow-[0_0_15px_rgba(20,184,166,0.2)] transition-all">
-            <h3 className="text-xl font-bold mb-2">QR Code Generator </h3>
-            <p className="text-gray-400 mb-4">
-                <strong>Key features: </strong>
-                This project showcases fundamental DOM manipulation, API integration, and effective user feedback handling.
-            </p>
-
-            <div>
-                {["JavaScript","SCSS","HTML","CSS"].map((skill, key) => (
-                   <span
-                   key={key}
-                   className="bg-teal-500/10 text-teal-500 py-1 px-3 rounded-full text-sm font-medium hover:bg-teal-500/20 
-                   hover:shadow-[0_0_15px_rgba(20,184,166,0.2)] transition"
-                 >
-                   {skill}
-                 </span>
-                ))}
-            </div>
-            <div className="flex justify-between items-center mt-2">
-                <a href="https://shad-islam.github.io/QR-code-generator/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-500 hover:text-teal-400 transition duration-200 mt-4 inline-block">
-                View Project → </a>
-            </div>
-          </div>
-            {/* fourth project */}
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-teal-500/30 hover:shadow-[0_0_15px_rgba(20,184,166,0.2)] transition-all">
-            <h3 className="text-xl font-bold mb-2">Weather App </h3>
+            <h3 className="text-xl font-bold mb-2">Note App </h3>
             <p className="text-gray-400 mb-4">
                 <strong>Key features: </strong>
                 CRUD, searching, filtering (all, selected, unselected), and managing notes efficiently. It uses React for state management and prioritizes user-friendly design and teamwork.
@@ -118,6 +92,35 @@ export const Projects = () => {
                 View Project → </a>
             </div>
           </div>
+                     {/* fourth project */}
+
+         <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-teal-500/30 hover:shadow-[0_0_15px_rgba(20,184,166,0.2)] transition-all">
+            <h3 className="text-xl font-bold mb-2">Student Management System </h3>
+            <p className="text-gray-400 mb-4">
+                <strong>Key features: </strong>
+                This project allows users to perform CRUD operations on student data with a responsive layout and dynamic success/error messages. It highlights key Django features, such as models, views, and templates, making it a useful tool for learning full-stack web development.
+            </p>
+
+            <div>
+                {["Django","Pyhton","Tailwind CSS","HTML","CSS",].map((skill, key) => (
+                   <span
+                   key={key}
+                   className="bg-teal-500/10 text-teal-500 py-1 px-3 rounded-full text-sm font-medium hover:bg-teal-500/20 
+                   hover:shadow-[0_0_15px_rgba(20,184,166,0.2)] transition"
+                 >
+                   {skill}
+                 </span>
+                ))}
+            </div>
+            <div className="flex justify-between items-center mt-2">
+                <a href="https://student-management-65p0.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-500 hover:text-teal-400 transition duration-200 mt-4 inline-block">
+                View Project → </a>
+            </div>
+          </div>
+            
         </div>
       </div>
     </section>
