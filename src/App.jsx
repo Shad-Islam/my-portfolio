@@ -6,6 +6,7 @@ import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/section/Home";
 import { About } from "./components/section/About";
 import { Projects } from "./components/section/Projects";
+import { Contact } from "./components/section/Contact";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -23,6 +24,7 @@ function App() {
         <Home />
         <About/>
         <Projects/>
+        <Contact/>
       </div>
     </>
   );
