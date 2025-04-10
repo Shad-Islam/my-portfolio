@@ -25,3 +25,18 @@ html,body{
 }
 /* loading css end  */
 
+/* reveal scroll css start  */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+.reveal-visible{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+/* reveal scroll css end */
+
