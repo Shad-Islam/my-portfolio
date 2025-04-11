@@ -18,10 +18,10 @@ function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  console.log("isDarkMode:", isDarkMode); 
+  console.log("isDarkMode:", isDarkMode);
 
   return (
-    <Suspense fallback={<div className="spinner">Loading...</div>}>
+    <Suspense fallback={<div className="spinner"></div>}>
       {!loading && <LoadingScreen onComplete={() => setLoading(true)} />}
       {loading && (
         <div
@@ -31,11 +31,17 @@ function App() {
         >
           <Navbar
             openMenu={openMenu}
+            isDarkMode={isDarkMode}
+            setOpenMenu={setOpenMenu}
+            setIsDarkMode={setIsDarkMode}
+          />
+          <MobileMenu
+            openMenu={openMenu}
             setOpenMenu={setOpenMenu}
             isDarkMode={isDarkMode}
             setIsDarkMode={setIsDarkMode}
+
           />
-          <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
           <Home />
           <About isDarkMode={isDarkMode} />
           <Projects isDarkMode={isDarkMode} />

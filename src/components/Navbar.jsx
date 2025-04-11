@@ -64,7 +64,7 @@ const Navbar = ({ openMenu, setOpenMenu, isDarkMode, setIsDarkMode }) => {
             {/* Theme Toggle Button */}
             <button
               onClick={() => setIsDarkMode((prev) => !prev)}
-              className="text-gray-100 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition"
+              className="text-gray-100 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition cursor-pointer"
             >
               {isDarkMode ? "Light Mode" : "Dark Mode"}
             </button>

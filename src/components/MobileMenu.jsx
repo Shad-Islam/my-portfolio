@@ -1,4 +1,4 @@
-const MobileMenu = ({ openMenu, setOpenMenu }) => {
+const MobileMenu = ({ openMenu, setOpenMenu, isDarkMode, setIsDarkMode }) => {
   return (
     <div
       className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out 
@@ -63,6 +63,16 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
       >
         Contact
       </a>
+      {/* Theme Toggle Button */}
+      <button
+        onClick={() => {
+          setIsDarkMode((prev) => !prev);
+          setOpenMenu(false);
+        }}
+        className="text-gray-100 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition my-4 cursor-pointer"
+      >
+        {isDarkMode ? "Light Mode" : "Dark Mode"}
+      </button>
     </div>
   );
 };
