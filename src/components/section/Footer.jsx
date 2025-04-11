@@ -2,7 +2,9 @@ export const Footer = ({ isDarkMode }) => {
   return (
     <footer
       className={`py-6 border-t ${
-        isDarkMode ? "bg-black border-white/10 text-gray-400" : "bg-gray-100 border-gray-300 text-gray-700"
+        isDarkMode
+          ? "bg-black border-white/10 text-gray-400"
+          : "bg-gray-100 border-gray-300 text-gray-700"
       }`}
     >
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
