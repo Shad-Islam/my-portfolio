@@ -1,4 +1,4 @@
-export const Footer = ({ isDarkMode }) => {
+const Footer = ({ isDarkMode }) => {
   return (
     <footer
       className={`py-6 border-t ${
@@ -41,3 +41,5 @@ export const Footer = ({ isDarkMode }) => {
     </footer>
   );
 };
+
+export default Footer;

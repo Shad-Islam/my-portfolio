@@ -1,4 +1,4 @@
-export const MobileMenu = ({ openMenu, setOpenMenu }) => {
+const MobileMenu = ({ openMenu, setOpenMenu }) => {
   return (
     <div
       className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out 
@@ -66,3 +66,5 @@ export const MobileMenu = ({ openMenu, setOpenMenu }) => {
     </div>
   );
 };
+
+export default MobileMenu;

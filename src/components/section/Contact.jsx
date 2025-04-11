@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
+import RevealOnScroll from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 
-export const Contact = ({ isDarkMode }) => {
+const Contact = ({ isDarkMode }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,11 +42,13 @@ export const Contact = ({ isDarkMode }) => {
       <RevealOnScroll>
         <div
           className={`w-full max-w-lg p-6 rounded-xl shadow-lg ${
-            isDarkMode ? "bg-black/50 border-white/10" : "bg-white border-gray-300"
+            isDarkMode
+              ? "bg-black/50 border-white/10"
+              : "bg-white border-gray-300"
           }`}
         >
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-teal-500 to-green-600 bg-clip-text text-transparent text-center">
-            Get In Touch
+            Let's Work Together
           </h2>
           <form className="space-y-6 " onSubmit={handelSubmit}>
             <div className="space-y-4">
@@ -60,7 +62,7 @@ export const Contact = ({ isDarkMode }) => {
                     ? "border-white/10 text-white placeholder-gray-400"
                     : "border-gray-300 text-gray-900 placeholder-gray-500"
                 }`}
-                placeholder="Name..."
+                placeholder="Your name"
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -76,7 +78,7 @@ export const Contact = ({ isDarkMode }) => {
                     ? "border-white/10 text-white placeholder-gray-400"
                     : "border-gray-300 text-gray-900 placeholder-gray-500"
                 }`}
-                placeholder="abc@xyz.com"
+                placeholder="Your email"
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -111,3 +113,5 @@ export const Contact = ({ isDarkMode }) => {
     </section>
   );
 };
+
+export default Contact;

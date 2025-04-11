@@ -1,6 +1,6 @@
-import { RevealOnScroll } from "../RevealOnScroll";
+import RevealOnScroll from "../RevealOnScroll";
 
-export const About = ({ isDarkMode }) => {
+const About = ({ isDarkMode }) => {
   const frontendSkills = [
     "React",
     "JavaScript",
@@ -139,3 +139,5 @@ export const About = ({ isDarkMode }) => {
     </section>
   );
 };
+
+export default About;

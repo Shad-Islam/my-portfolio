@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 
-export const LoadingScreen = ({onComplete}) => {
+const LoadingScreen = ({onComplete}) => {
 
     const [text, setText] = useState("");
     const fullText = "<Shad.dev />";
@@ -32,3 +32,5 @@ export const LoadingScreen = ({onComplete}) => {
        </div>
     );
 }
+
+export default LoadingScreen;

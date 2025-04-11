@@ -1,6 +1,6 @@
-import { RevealOnScroll } from "../RevealOnScroll";
+import RevealOnScroll from "../RevealOnScroll";
 
-export const Projects = ({ isDarkMode }) => {
+const Projects = ({ isDarkMode }) => {
   return (
     <section
       id="projects"
@@ -188,3 +188,5 @@ export const Projects = ({ isDarkMode }) => {
     </section>
   );
 };
+
+export default Projects;
