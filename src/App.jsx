@@ -7,6 +7,7 @@ import { Home } from "./components/section/Home";
 import { About } from "./components/section/About";
 import { Projects } from "./components/section/Projects";
 import { Contact } from "./components/section/Contact";
+import { Footer } from "./components/section/Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,7 @@ function App() {
         <About/>
         <Projects/>
         <Contact/>
+        <Footer/>
       </div>
     </>
   );
