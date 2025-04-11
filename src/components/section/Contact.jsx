@@ -38,7 +38,7 @@ export const Contact = () => {
       className="min-h-screen flex items-center justify-center py-20 px-4"
     >
       <RevealOnScroll>
-        <div className="w-full max-w-lg bg-white/5 border border-white/10 rounded-xl p-6 shadow-lg">
+        <div className="w-full max-w-lg  p-6 shadow-lg">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-teal-500 to-green-600 bg-clip-text text-transparent text-center">
             Get In Touch
           </h2>
