@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RevealOnScroll from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { toast } from "sonner"
 
 const Contact = ({ isDarkMode }) => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,8 @@ const Contact = ({ isDarkMode }) => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        alert("Message sent successfully!");
+        // alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFormData({
           name: "",
           email: "",
@@ -28,7 +30,8 @@ const Contact = ({ isDarkMode }) => {
         });
       })
       .catch(() => {
-        alert("Error sending message, please try again.");
+        // alert("Error sending message, please try again.");
+        toast.error("Error sending message, please try again.");
       });
   };
 

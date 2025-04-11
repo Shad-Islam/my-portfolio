@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useState } from "react";
 import "./App.css";
+import { Toaster } from "@/components/ui/sonner";
 
 // Lazy-loaded components
 const Home = lazy(() => import("./components/section/Home"));
@@ -40,6 +41,7 @@ function App() {
           <Projects isDarkMode={isDarkMode} />
           <Contact isDarkMode={isDarkMode} />
           <Footer isDarkMode={isDarkMode} />
+          <Toaster />
         </div>
       )}
     </Suspense>
