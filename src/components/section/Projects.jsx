@@ -29,11 +29,11 @@ const Projects = ({ isDarkMode }) => {
                 ,dynamically calculate total amount and responsive design.
               </p>
 
-              <div>
+              <div className="flex flex-wrap">
                 {["JavaScript", "HTML", "CSS"].map((skill, key) => (
                   <span
                     key={key}
-                    className={`py-1 px-3 rounded-full text-sm font-medium mr-2 transition ${
+                    className={`py-1 px-3 rounded-full text-sm font-medium mr-2 mt-2 transition ${
                       isDarkMode
                         ? "bg-teal-500/10 text-teal-500 hover:bg-teal-500/20"
                         : "bg-teal-500/20 text-teal-700 hover:bg-teal-500/30"
@@ -70,11 +70,11 @@ const Projects = ({ isDarkMode }) => {
                 structure.
               </p>
 
-              <div>
+              <div className="flex flex-wrap">
                 {["React", "JavaScript", "HTML", "CSS"].map((skill, key) => (
                   <span
                     key={key}
-                    className={`py-1 px-3 rounded-full text-sm font-medium mr-2 transition ${
+                    className={`py-1 px-3 rounded-full text-sm font-medium mr-2 mt-2 transition ${
                       isDarkMode
                         ? "bg-teal-500/10 text-teal-500 hover:bg-teal-500/20"
                         : "bg-teal-500/20 text-teal-700 hover:bg-teal-500/30"
@@ -112,11 +112,11 @@ const Projects = ({ isDarkMode }) => {
                 and prioritizes user-friendly design and teamwork.
               </p>
 
-              <div>
+              <div className="flex flex-wrap">
                 {["React", "JavaScript", "HTML", "CSS"].map((skill, key) => (
                   <span
                     key={key}
-                    className={`py-1 px-3 rounded-full text-sm font-medium mr-2 transition ${
+                    className={`py-1 px-3 rounded-full text-sm font-medium mr-2 mt-2 transition ${
                       isDarkMode
                         ? "bg-teal-500/10 text-teal-500 hover:bg-teal-500/20"
                         : "bg-teal-500/20 text-teal-700 hover:bg-teal-500/30"
@@ -158,12 +158,12 @@ const Projects = ({ isDarkMode }) => {
                 full-stack web development.
               </p>
 
-              <div>
+              <div className="flex flex-wrap">
                 {["Django", "Pyhton", "Tailwind CSS", "HTML", "CSS"].map(
                   (skill, key) => (
                     <span
                       key={key}
-                      className="bg-teal-500/10 text-teal-500 py-1 px-3 rounded-full text-sm font-medium mr-2 hover:bg-teal-500/20 
+                      className="bg-teal-500/10 text-teal-500 py-1 px-3 rounded-full text-sm font-medium mr-2 mt-2 hover:bg-teal-500/20 
                    hover:shadow-[0_0_15px_rgba(20,184,166,0.2)] transition"
                     >
                       {skill}
