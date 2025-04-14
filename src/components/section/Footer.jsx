@@ -1,4 +1,8 @@
-const Footer = ({ isDarkMode }) => {
+import { AppContext } from "../../context/AppContext";
+import { useContext } from "react";
+
+const Footer = () => {
+  const { isDarkMode } = useContext(AppContext);
   return (
     <footer
       className={`py-6 border-t ${

@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import RevealOnScroll from "../RevealOnScroll";
+import { AppContext } from "../../context/AppContext";
 
-const Projects = ({ isDarkMode }) => {
+const Projects = () => {
+  const { isDarkMode } = useContext(AppContext);
   return (
     <section
       id="projects"

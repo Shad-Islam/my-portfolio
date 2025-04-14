@@ -1,6 +1,10 @@
-import { useEffect } from "react";
+import { AppContext } from "../context/AppContext";
+import { useContext, useEffect } from "react";
 
-const Navbar = ({ openMenu, setOpenMenu, isDarkMode, setIsDarkMode }) => {
+const Navbar = () => {
+  const { openMenu, setOpenMenu, isDarkMode, setIsDarkMode } =
+    useContext(AppContext);
+
   useEffect(() => {
     document.body.style.overflow = openMenu ? "hidden" : "";
   }, [openMenu]);

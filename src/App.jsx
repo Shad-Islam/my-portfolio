@@ -1,6 +1,7 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useContext } from "react";
 import "./App.css";
 import { Toaster } from "@/components/ui/sonner";
+import { AppContext } from "./context/AppContext";
 
 // Lazy-loaded components
 const Home = lazy(() => import("./components/section/Home"));
@@ -14,39 +15,24 @@ const MobileMenu = lazy(() => import("./components/MobileMenu"));
 const LoadingScreen = lazy(() => import("./components/LoadingScreen"));
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  const [openMenu, setOpenMenu] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  console.log("isDarkMode:", isDarkMode);
+  const { loading, isDarkMode } = useContext(AppContext);
 
   return (
-    <Suspense fallback={<div className="spinner"></div>}>
-      {!loading && <LoadingScreen onComplete={() => setLoading(true)} />}
+    <Suspense fallback={<div></div>}>
+      {!loading && <LoadingScreen />}
       {loading && (
         <div
           className={`min-h-screen ${
             isDarkMode ? "bg-black text-gray-100" : "bg-gray-100 text-gray-900"
           }`}
         >
-          <Navbar
-            openMenu={openMenu}
-            isDarkMode={isDarkMode}
-            setOpenMenu={setOpenMenu}
-            setIsDarkMode={setIsDarkMode}
-          />
-          <MobileMenu
-            openMenu={openMenu}
-            setOpenMenu={setOpenMenu}
-            isDarkMode={isDarkMode}
-            setIsDarkMode={setIsDarkMode}
-
-          />
+          <Navbar />
+          <MobileMenu />
           <Home />
-          <About isDarkMode={isDarkMode} />
-          <Projects isDarkMode={isDarkMode} />
-          <Contact isDarkMode={isDarkMode} />
-          <Footer isDarkMode={isDarkMode} />
+          <About />
+          <Projects />
+          <Contact />
+          <Footer />
           <Toaster />
         </div>
       )}

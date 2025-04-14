@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import RevealOnScroll from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 import { toast } from "sonner"
+import { AppContext } from "../../context/AppContext";
 
-const Contact = ({ isDarkMode }) => {
+const Contact = () => {
+  const { isDarkMode } = useContext(AppContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",

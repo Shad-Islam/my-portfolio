@@ -1,6 +1,9 @@
 import RevealOnScroll from "../RevealOnScroll";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
-const About = ({ isDarkMode }) => {
+const About = () => {
+  const { isDarkMode } = useContext(AppContext);
   const frontendSkills = [
     "React",
     "JavaScript",

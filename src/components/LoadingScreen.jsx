@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { useContext} from "react";
+import { AppContext } from "../context/AppContext";
 
-const LoadingScreen = ({onComplete}) => {
+const LoadingScreen = () => {
+    const { setLoading } = useContext(AppContext); 
 
     const [text, setText] = useState("");
     const fullText = "<Shad.dev />";
@@ -15,13 +18,13 @@ const LoadingScreen = ({onComplete}) => {
             clearInterval(interval);
 
             setTimeout(() => {
-                onComplete();
+                setLoading(true);
             }, 1000);
         }
        }, 100);
          return () => clearInterval(interval);
 
-    },[onComplete])
+    },[setLoading])
 
 
     return (

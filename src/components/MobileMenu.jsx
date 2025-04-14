@@ -1,4 +1,9 @@
-const MobileMenu = ({ openMenu, setOpenMenu, isDarkMode, setIsDarkMode }) => {
+import { AppContext } from "../context/AppContext";
+import { useContext } from "react";
+
+const MobileMenu = () => {
+  const { openMenu, setOpenMenu, isDarkMode, setIsDarkMode } =
+    useContext(AppContext);
   return (
     <div
       className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out 
